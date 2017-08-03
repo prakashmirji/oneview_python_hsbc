@@ -1,1 +1,1 @@
-# oneview_python_hscn
+# oneview sample python scripts
