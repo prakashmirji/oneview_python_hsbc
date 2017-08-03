@@ -1,0 +1,2 @@
+firmware_name,API_version,build,compatibility,major,minor,applianceVersion,modelNumber,platformType,revision,serialNumber
+[u'SPP 2015.06.0', u'SPP 2015.10.0'],500,0299553,3.10,3,10,3.10.04-0299553,HPE OneView VM - VMware vSphere,vm,04,VMware-564d6e83a479f6d6-a3135cc0df7da78a
