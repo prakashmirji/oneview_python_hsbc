@@ -33,7 +33,7 @@ def logout():
 
 
 # Try load config from a file (if there is a config file)
-config = try_load_from_file(config)
+config = try_load_from_file(config,"config_3.1.json")
 config['credentials']['password'] = getPw
 
 try:
@@ -43,7 +43,7 @@ except HPOneViewException as e:
 
 #output file with headers
 fp= open (report_file,"w+")
-fp.write("firmware_name"+",API_version"+",build"+",compatibility"+",major"+",minor"+",applianceVersion"+",modelNumber"+",platformType"+",revision"+",serialNumber"+"\n")
+fp.write("firmware_name"+",API_version"+",build"+",compatibility"+",major"+",minor"+",applianceVersion"+",modelNumber"+",platformType"+",revision"+",serialNumber"+",serverHardwareCount"+"\n")
 
 baselineArray = []
 
@@ -68,7 +68,12 @@ platformType = applianceInfo['platformType']
 revision = applianceInfo['revision']
 serialNumber = applianceInfo['serialNumber']
 
-fp.write(str(baselineArray)+","+str(version)+","+str(build)+","+str(compatibility)+","+str(major)+","+str(minor)+","+str(software)+","+str(modelNumber)+","+str(platformType)+","+str(revision)+","+str(serialNumber)+"\n")
+#server hardware count
+response =  oneview_client.connection.get_by_uri('/rest/server-hardware')
+#pprint(response['count'])
+count = response['count']
+
+fp.write(str(baselineArray)+","+str(version)+","+str(build)+","+str(compatibility)+","+str(major)+","+str(minor)+","+str(software)+","+str(modelNumber)+","+str(platformType)+","+str(revision)+","+str(serialNumber)+","+str(count)+"\n")
 print("output file : "+report_file)
 
 logout()
