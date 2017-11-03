@@ -19,17 +19,17 @@ Attributes to be set in
 ------------------------
 
 - In `config.json` file
-
-
-	'''{
-		"ip": "172.42.253.230",
-		"credentials": {
-			"userName": "Administrator"
-		},
-		"api_version": 500,
-		"templateName": ["Example_template","Example_template_2","Example_template_3"],
-		"targetApplianceIP": ["172.42.253.231"]
-	}'''
+	'''
+		{
+			"ip": "172.42.253.230",
+			"credentials": {
+				"userName": "Administrator"
+			},
+			"api_version": 500,
+			"templateName": ["Example_template","Example_template_2","Example_template_3"],
+			"targetApplianceIP": ["172.42.253.231"]
+		}
+	'''
 	
 	where
 	
@@ -43,7 +43,7 @@ Attributes to be set in
 	
 	Note:
 	
-		- username and password is assumed to be same for all the OV appliances (source and target/s)
+	username and password is assumed to be same for all the OV appliances (source and target/s)
 		
 		
 Command to run the script
