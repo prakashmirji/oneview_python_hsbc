@@ -1,0 +1,12 @@
+### Appliance Backup Scripts
+
+This Readme file helps you to run following use cases
+  -create appliance backup
+  -download appliance backup
+  
+Script can run against one or more appliance. 
+
+### How to run script
+    edit config.json and then run following command
+    
+    >python create_and_download_backups_multiple_OVs.py
