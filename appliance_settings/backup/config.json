@@ -1,0 +1,7 @@
+{
+  "ip": ["172.42.253.230","172.42.253.231","172.42.253.232","172.42.253.233"],
+  "credentials": {
+    "userName": "administrator",
+    "authLoginDomain": ""    
+  }
+}
